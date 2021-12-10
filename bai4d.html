@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lâm Văn Thủy</title>
+</head>
+<body>
+<input type="text" id="year" placeholder="Nhập vào năm ?">
+<button onclick="theKy()">Tính</button>
+<p id="ketqua"></p>
+
+<script>
+    function theKy() {
+        let year = parseInt(document.getElementById("year").value);
+        let theKy = parseInt(year / 100);
+        if (year % 100 === 0) {
+            document.getElementById("ketqua").innerHTML = "Năm " + year + " là thế kỷ " + theKy
+        } else {
+            document.getElementById("ketqua").innerHTML = "Năm " + year + " là thế kỷ " + parseInt(theKy + 1)
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>

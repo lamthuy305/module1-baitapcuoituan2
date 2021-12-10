@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lâm Văn Thủy</title>
+</head>
+<body>
+<input type="text" id="chieuDai" placeholder="Chiều dài cạnh hình vuông">
+<button onclick="tinhToan()">Tính</button>
+<p id="ketqua"></p>
+
+<script>
+    function tinhToan() {
+        let chieuDai = document.getElementById("chieuDai").value;
+        chuvi = chieuDai * 4;
+        document.getElementById("ketqua").innerHTML = "Chu vi hình vuông là = " + chuvi;
+    }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lâm Văn Thủy</title>
+</head>
+<body>
+
+<input type="text" id="canhThuNhat" placeholder="Nhập cạnh thứ nhất">
+<input type="text" id="canhThuHai" placeholder="Nhập cạnh thứ hai">
+<input type="text" id="canhThuBa" placeholder="Nhập cạnh thứ ba">
+
+<button onclick="kiemTra()">Kiểm Tra</button>
+<p id="ketqua"></p>
+
+<script>
+    // Hàm kiểm tra 3 cạnh 1 tam giác
+
+    // function kiemTra() {
+    //     let canhThuNhat = parseFloat(document.getElementById("canhThuNhat").value);
+    //     let canhThuHai = parseFloat(document.getElementById("canhThuHai").value);
+    //     let canhThuHBa = parseFloat(document.getElementById("canhThuBa").value);
+    //     let tong1 = canhThuNhat + canhThuHai
+    //     let tong2 = canhThuNhat + canhThuHBa
+    //     let tong3 = canhThuHBa + canhThuHai
+    //     if ( tong1>canhThuHBa && tong2 > canhThuHai && tong3 > canhThuNhat ) {
+    //         document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác"
+    //     } else {
+    //         document.getElementById("ketqua").innerHTML = "Đây không phải là 3 cạnh của 1 tam giác"
+    //     }
+    // }
+
+
+    // Hàm kiểm tra 3 cạnh 1 tam giác cân
+
+    // function kiemTra() {
+    //     let canhThuNhat = parseFloat(document.getElementById("canhThuNhat").value);
+    //     let canhThuHai = parseFloat(document.getElementById("canhThuHai").value);
+    //     let canhThuHBa = parseFloat(document.getElementById("canhThuBa").value);
+    //     let tong1 = canhThuNhat + canhThuHai
+    //     let tong2 = canhThuNhat + canhThuHBa
+    //     let tong3 = canhThuHBa + canhThuHai
+    //     if (tong1 > canhThuHBa && tong2 > canhThuHai && tong3 > canhThuNhat) {
+    //         if (canhThuNhat === canhThuHai || canhThuNhat === canhThuHBa || canhThuHai === canhThuHBa) {
+    //             document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác cân"
+    //         } else {
+    //         document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác" }
+    //     } else {
+    //         document.getElementById("ketqua").innerHTML = "Đây không phải là 3 cạnh của 1 tam giác"
+    //     }
+    // }
+
+    // Hàm kiểm tra 3 cạnh 1 tam giác đều (cách 1 - kiểm tra có phải là tam giác ko sau đó kiểm tra đều)
+    //
+    // function kiemTra() {
+    //     let canhThuNhat = parseFloat(document.getElementById("canhThuNhat").value);
+    //     let canhThuHai = parseFloat(document.getElementById("canhThuHai").value);
+    //     let canhThuHBa = parseFloat(document.getElementById("canhThuBa").value);
+    //     let tong1 = canhThuNhat + canhThuHai
+    //     let tong2 = canhThuNhat + canhThuHBa
+    //     let tong3 = canhThuHBa + canhThuHai
+    //     if (tong1 > canhThuHBa && tong2 > canhThuHai && tong3 > canhThuNhat) {
+    //         if (canhThuNhat === canhThuHai && canhThuHai === canhThuHBa) {
+    //             document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác đều"
+    //         } else {
+    //         document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác" }
+    //     } else {
+    //         document.getElementById("ketqua").innerHTML = "Đây không phải là 3 cạnh của 1 tam giác"
+    //     }
+    // }
+
+    // Hàm kiểm tra 3 cạnh 1 tam giác đều (cách 2 - chỉ kiểm tra tam giác đều)
+
+    // function kiemTra() {
+    //     let canhThuNhat = parseFloat(document.getElementById("canhThuNhat").value);
+    //     let canhThuHai = parseFloat(document.getElementById("canhThuHai").value);
+    //     let canhThuHBa = parseFloat(document.getElementById("canhThuBa").value);
+    //     if (canhThuNhat === canhThuHai && canhThuHai === canhThuHBa) {
+    //         document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác đều"
+    //     }
+    // }
+    //
+
+
+    // Hàm kiểm tra tam 1 giác vuông
+
+    function kiemTra() {
+        let canhThuNhat = parseFloat(document.getElementById("canhThuNhat").value);
+        let canhThuHai = parseFloat(document.getElementById("canhThuHai").value);
+        let canhThuHBa = parseFloat(document.getElementById("canhThuBa").value);
+        let tong1 = canhThuNhat + canhThuHai
+        let tong2 = canhThuNhat + canhThuHBa
+        let tong3 = canhThuHBa + canhThuHai
+        let binhPhuongCanh1 = canhThuNhat * canhThuNhat
+        let binhPhuongCanh2 = canhThuHai * canhThuHai
+        let binhPhuongCanh3 = canhThuHBa * canhThuHBa
+
+        if (tong1 > canhThuHBa && tong2 > canhThuHai && tong3 > canhThuNhat) {
+            if (binhPhuongCanh1 === binhPhuongCanh2 + binhPhuongCanh3 ||
+                binhPhuongCanh2 === binhPhuongCanh1 + binhPhuongCanh3 ||
+                binhPhuongCanh3 === binhPhuongCanh1 + binhPhuongCanh2) {
+                document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác vuông"
+            } else {
+                document.getElementById("ketqua").innerHTML = "Đây là 3 cạnh của 1 tam giác không vuông"
+            }
+        } else {
+            document.getElementById("ketqua").innerHTML = "Đây không phải là 3 cạnh của 1 tam giác"
+        }
+    }
+
+</script>
+</body>
+</html>

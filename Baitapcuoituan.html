@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lâm Văn Thủy</title>
+</head>
+<body>
+
+
+<input type="text" id="soThuNhat" placeholder="Nhập số thứ nhất">
+<input type="text" id="soThuHai" placeholder="Nhập số thứ hai">
+<button onclick="tinhS()">Tính diện tích</button>
+<h1 id="dientich"></h1>
+
+<script>
+    // bài 1 : Câu lệnh là
+    // alert("Hiển thị hộp thoại")
+
+    // Hiển thị tên lên hộp thoại
+    // alert("Lâm Văn Thủy")
+
+    // Bài 2
+    // prompt("Nhập vào hộp thoại")
+
+    // Code nhân giá trị và trả lại bình phương của nó
+    // let number = parseFloat(prompt("Nhập số vào: "))
+    // let binhphuong = number * number
+    // alert("Bình phương của " + number + " là: " + binhphuong)
+    //
+
+    // Bài 3
+    function tinhS() {
+        let soDoThuNhat = document.getElementById("soThuNhat").value;
+        let soDoThuHai = document.getElementById("soThuHai").value;
+        dientichS = soDoThuHai * soDoThuHai;
+        document.getElementById("dientich").innerHTML = "S = " + dientichS;
+    }
+</script>
+
+
+</body>
+</html>

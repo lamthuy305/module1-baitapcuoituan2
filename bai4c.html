@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lâm Văn Thủy</title>
+</head>
+<body>
+
+<input type="text" id="soThuNhat" placeholder="Nhập số thứ nhất">
+<input type="text" id="soThuHai" placeholder="Nhập số thứ hai">
+<button onclick="tinhTong()">Tính</button>
+<p id="ketqua"></p>
+
+<script>
+
+    function tinhTong() {
+        let soThuNhat = parseFloat(document.getElementById("soThuNhat").value);
+        let soThuHai = parseFloat(document.getElementById("soThuHai").value);
+        let tong = 0;
+        for (i = soThuNhat; i <= soThuHai; i++) {
+            tong = tong + i
+        }
+        document.getElementById("ketqua").innerHTML = "Tổng cần tính là: " + tong
+    }
+
+
+</script>
+</body>
+</html>

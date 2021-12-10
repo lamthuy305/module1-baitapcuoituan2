@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lâm Văn Thủy</title>
+</head>
+<body>
+
+<input type="text" id="soThuNhat" placeholder="Nhập số thứ nhất">
+<input type="text" id="soThuHai" placeholder="Nhập số thứ hai">
+<button onclick="tinhBinhPhuong()">Tính</button>
+<p id="ketqua"></p>
+
+<script>
+
+    function tinhBinhPhuong() {
+        let soThuNhat = document.getElementById("soThuNhat").value;
+        let soThuHai = document.getElementById("soThuHai").value;
+        binhPhuongSoThuNhat = soThuNhat * soThuNhat;
+        ketQuaThuHai = soThuNhat ** soThuHai;
+
+        document.getElementById("ketqua").innerHTML = "Kết quả lần lượt là: " + binhPhuongSoThuNhat + " và " + ketQuaThuHai
+    }
+
+
+</script>
+</body>
+</html>
